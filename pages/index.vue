@@ -11,6 +11,13 @@
     </div>
     <div class="flex-initial">
           CHAT
+      <nuxt-link
+        :key='link'
+        :to='`/${link}`'
+        v-for='link in links'
+        >
+          {{ link }}
+        </nuxt-link>
     </div>
   </div>  
 </template>
@@ -21,6 +28,10 @@
       return {
         initialLocation: [50.6789, 17.9061],
         locationGPS: false,
+        links: [
+          'receiver',
+          'sender',
+        ],
       }
     },
     methods: {

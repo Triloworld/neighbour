@@ -27,12 +27,26 @@ export default {
     ['@nuxtjs/tailwindcss', { 
       /* module options */ 
     }],
- ],
- css: [
-  'leaflet.locatecontrol/dist/L.Control.Locate.css',
-  '~/assets/css/styles.css'
- ],
- plugins: [
-  { src: "~/plugins/vue2-leaflet-locatecontrol.js", mode: 'client' },
- ]
+  ],
+	build: {
+		/*
+		** You can extend webpack config here
+		*/
+		extend(config, ctx) {
+		},
+		/*
+		** Bundle external packages
+		*/
+		vendor: [
+			'peerjs',
+		],
+	},
+  css: [
+    'leaflet.locatecontrol/dist/L.Control.Locate.css',
+    '~/assets/css/styles.css'
+  ],
+  plugins: [
+    { src: "~/plugins/vue2-leaflet-locatecontrol.js", mode: 'client' },
+    { src: "@plugins/inject-peerjs.client.js", mode: 'client' }
+  ]
 }
