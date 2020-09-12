@@ -1,7 +1,6 @@
 <template>
   <div class="flex flex-col w-full m-auto">
     IT'S WORK !
-    Glitch :) second time
   </div>  
 </template>
 
