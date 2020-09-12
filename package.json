@@ -68,5 +68,8 @@
   },
   "browserslist": [
     "> 5%"
-  ]
+  ],
+  "devDependencies": {
+    "glitcheroo": "^1.2.1"
+  }
 }
