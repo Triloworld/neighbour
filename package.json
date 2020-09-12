@@ -63,7 +63,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "engines": {
-    "node": ">=v12.18.3",
+    "node": ">=v12.0.0",
     "npm": ">=5.0.0"
   },
   "browserslist": [
