@@ -28,19 +28,6 @@ export default {
       /* module options */ 
     }],
   ],
-	build: {
-		/*
-		** You can extend webpack config here
-		*/
-		extend(config, ctx) {
-		},
-		/*
-		** Bundle external packages
-		*/
-		vendor: [
-			'peerjs',
-		],
-	},
   css: [
     'leaflet.locatecontrol/dist/L.Control.Locate.css',
     '~/assets/css/styles.css'
