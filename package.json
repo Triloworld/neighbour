@@ -38,9 +38,11 @@
     "lint-fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "precommit": "npm run lint",
     "deploy-test": "cross-env NODE_ENV=production node --inspect-brk node_modules/.bin/nuxt generate",
-    "deploy": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 node_modules/.bin/nuxt build --target static && node_modules/.bin/nuxt export"
+    "deploy": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 node_modules/.bin/nuxt build --target static && node_modules/.bin/nuxt export",
+    "deploy-remote": "npx glitcheroo deploy"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
     "@nuxt/components": "^1.1.0",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/dotenv": "^1.4.1",
@@ -50,9 +52,9 @@
     "axios": "^0.20.0",
     "cross-env": "^7.0.2",
     "eslint": "^7.9.0",
-    "normalize.css": "^8.0.1",
+    "leaflet.locatecontrol": "^0.72.0",
     "nuxt": "^2.14.5",
-    "nuxt-netlify-http2-server-push": "^0.1.3",
+    "nuxt-leaflet": "0.0.21",
     "nuxt-polyfill": "^1.0.3",
     "postcss-nested": "^4.2.3",
     "postcss-responsive-type": "^1.0.0",
