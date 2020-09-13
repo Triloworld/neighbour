@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="relative">
 		<h1>Sender</h1>
 
 			<div class="flex flex-col">
@@ -40,6 +40,7 @@
 <script>
   import { mapState } from 'vuex'
   export default {
+		name: "ChatSender",
     data() {
       return {
         message: 'Waiting for input ...',
@@ -54,10 +55,9 @@
     },
     methods: {
       joinPeer() {
-        debugger;
         if (this.peerId) {
-          this.$peer.conn = this.$peer.connect(this.peerId.trim(), { reliable: true })
-          this.$peer.conn.on('open', () => {
+          this.$store.$peer.conn = this.$store.$peer.connect(this.peerId.trim(), { reliable: true })
+          this.$store.$peer.conn.on('open', () => {
             this.message = `Connected to peer ${this.peerId}`
           })
         }

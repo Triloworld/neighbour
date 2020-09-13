@@ -1,10 +1,14 @@
-import Peer from 'peerjs'
+import Vue from "vue";
+import VuePeerJS from 'vue-peerjs';
+import Peer from 'peerjs';
 
-const peer = new Peer(null, { debug: 3 })
+var crypto = require("crypto");
+var id = crypto.randomBytes(20).toString('hex');
 
-// TODO: Find a way to make peer load before inject occures (e.g. async / await?)
-// TODO: as currently there is a race condition between vue mounting and peer
-// TODO: being ready
+let PeerJS = new Peer(id, { debug: 3 });
+
+Vue.use(VuePeerJS, PeerJS);
+
 export default ({ app }, inject) => {
-	inject('peer', peer)
+	inject('peer', PeerJS)
 }
