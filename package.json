@@ -3,12 +3,12 @@
   "description": "Chat for neighbour",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Triloworld/neighbour/issues"
+    "url": "https://github.com/webo-agency/neighbour/issues"
   },
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Triloworld/neighbour.git"
+    "url": "git+https://github.com/webo-agency/neighbour.git"
   },
   "keywords": [
     "chat",
@@ -27,7 +27,7 @@
       "url": "https://www.webo.agency"
     }
   ],
-  "homepage": "https://github.com/Triloworld/neighbour#readme",
+  "homepage": "https://github.com/webo-agency/neighbour#readme",
   "scripts": {
     "start": "nuxt build && nuxt",
     "dev": "nuxt dev",
@@ -38,8 +38,7 @@
     "lint-fix": "eslint --ext .js,.vue --ignore-path .gitignore . --fix",
     "precommit": "npm run lint",
     "deploy-test": "cross-env NODE_ENV=production node --inspect-brk node_modules/.bin/nuxt generate",
-    "deploy": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 node_modules/.bin/nuxt build --target static && node_modules/.bin/nuxt export",
-    "deploy-remote": "npx glitcheroo deploy"
+    "deploy": "node_modules/.bin/nuxt build --target static && node_modules/.bin/nuxt generate",
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
