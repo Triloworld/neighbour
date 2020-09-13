@@ -35,5 +35,9 @@ export default {
   plugins: [
     { src: "~/plugins/vue2-leaflet-locatecontrol.js", mode: 'client' },
     { src: "@plugins/inject-peerjs.client.js", mode: 'client' }
-  ]
+  ],
+  generate: {
+    dir: 'public'
+  },
+  buildModules: ['@nuxt/typescript-build']
 }
